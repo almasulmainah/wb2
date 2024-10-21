@@ -11,12 +11,12 @@ export default function Contact() {
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
   
-    const ubahPesan = (e) => {
+    const ubahPesan = (e: { target: { name: any; value: any; }; }) => {
       const { name, value } = e.target;
       setFormContact({ ...formContact, [name]: value });
     };
   
-    const submitPesan = (e) => {
+    const submitPesan = (e: { preventDefault: () => void; }) => {
       e.preventDefault();
       setIsSubmitted(true);
     };

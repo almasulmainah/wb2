@@ -11,7 +11,7 @@ export default function colorPicker() {
     document.body.className = theme;
   }, [theme]);
 
-  const changeTheme = (temaBaru) => {
+  const changeTheme = (temaBaru: React.SetStateAction<string>) => {
     setTheme(temaBaru);
   };
 
